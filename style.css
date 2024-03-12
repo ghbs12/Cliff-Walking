@@ -1,0 +1,22 @@
+.matriz {
+    display: grid;
+    grid-template-columns: repeat(6, 50px); /* Define 6 colunas com largura de 50 pixels cada */
+    grid-template-rows: repeat(4, 50px); /* Define 4 linhas com altura de 50 pixels cada */
+    gap: 2px; /* Espaçamento entre as células */
+    border: 1px solid black; /* Borda para separar as células */
+}
+
+.celula {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray; /* Cor de fundo das células */
+}
+
+.celula.danger {
+    background-color: red; /* Cor de fundo das células de perigo */
+}
+
+.celula.explored {
+    background-color: yellow; /* Cor de fundo das células exploradas */
+}
