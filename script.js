@@ -47,6 +47,11 @@ const  setMatriz = (valores, id)=> {
         }
     }
 }
+const gordaoDoPc = ()=>{
+    document.getElementById("gordao").classList.remove('hidden');
+    
+}
+
 const setDados = (pos, tentativas)=>{
     document.getElementById("pos").innerHTML= 'Posição: ' + pos;
     document.getElementById("tentativas").innerHTML= 'Tentativas: ' + tentativas;
@@ -69,11 +74,6 @@ const eveio = (x,y)=>{
     return false;
 }
 
-const ecilada = (x,y)=>{
-    if(looked[x][y] == -100) return true
-    return false;
-}
-
 const dentroMapa = (x, y) => {
     return x >= 0 && x < pesos.length && y >= 0 && y < pesos[0].length;
 };
@@ -90,7 +90,6 @@ const getPos = () => {
         const direcao = direcoes[randomIndex];
         if (dentroMapa(pos[0] + direcao[0], pos[1] + direcao[1])) {
             if(enovo(pos[0] + direcao[0], pos[1] + direcao[1])) return direcao;
-            if(ecilada(pos[0] + direcao[0], pos[1] + direcao[1])) console.log("buraco")
             if(eveio(pos[0] + direcao[0], pos[1] + direcao[1])) resto.push(direcao)
         }
         direcoes.splice(randomIndex, 1);
@@ -118,6 +117,7 @@ var andar = () => {
     update()
     if(pesos[pos[0]][pos[1]] == 100){
         alert("zamburgui") 
+        gordaoDoPc()
         return true;
     }
     else return false;

@@ -3,23 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matriz</title>
+    <title>Junin caçador de Hamburgui</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>
-        <div class="peso" id="pontos">
+    <div id="programa">
+        <h2>Junin caçador de Hamburgui</h2>
+        <h4>Algoritmo de Cliff-Walking</h4>
+        <div>
+            <div class="peso" id="pontos">
+            </div>
+            <div class="pesos" id="tentativas">
+            </div>
+            <div class="pesos" id="pos">
+            </div>
         </div>
-        <div class="pesos" id="tentativas">
+        <div class="divs">
+            <div class="matriz" id="mundo">
+            </div>
+            <div class="matriz" id="looked">
+            </div>
         </div>
-        <div class="pesos" id="pos">
+        <div class="divs">
+            <button onclick="andar()">Andar</button>
+            <button onclick="auto()">Auto</button>
+            <button onclick="precoce()" class="vermeio">Precoce</button>
         </div>
     </div>
-    <div class="matriz" id="mundo">
+    <div class="hidden" id="gordao">
+        <h3>Vitor era meu nome de nerd, agora sou o gordão do pc, o comedor de hamburgui</h3>
     </div>
-    <div class="matriz" id="looked">
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>

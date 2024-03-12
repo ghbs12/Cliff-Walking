@@ -1,22 +1,104 @@
 .matriz {
     display: grid;
-    grid-template-columns: repeat(6, 50px); /* Define 6 colunas com largura de 50 pixels cada */
-    grid-template-rows: repeat(4, 50px); /* Define 4 linhas com altura de 50 pixels cada */
-    gap: 2px; /* Espaçamento entre as células */
-    border: 1px solid black; /* Borda para separar as células */
+    grid-template-columns: repeat(6, 50px);
+    grid-template-rows: repeat(4, 50px);
+    gap: 2px;
+    border: 1px solid black;
+    margin: 2%;
 }
 
 .celula {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: lightgray; /* Cor de fundo das células */
+    background-color: lightgray;
 }
 
 .celula.danger {
-    background-color: red; /* Cor de fundo das células de perigo */
+    background-color: red;
 }
 
 .celula.explored {
-    background-color: yellow; /* Cor de fundo das células exploradas */
+    background-color: yellow;
+}
+
+.divs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#programa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#gordao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+body {
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 300;
+}
+
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+button {
+    color: #fff;
+    background-color: #3498db;
+    border: 2px solid #3498db;
+    margin-left: 2%;
+}
+.vermeio{
+    background-color: crimson;
+    border: 2px solid crimson;
+}
+
+
+button:hover {
+    background-color: #2980b9;
+}
+h3{
+    color: crimson;
+}
+h2{
+    color: tomato;
+}
+
+img{
+    height: 450px;
+}
+.hidden{
+    display: none !important
+}
+.show{
+    display: inline;
+}
+@media screen and (max-width: 768px) {
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
